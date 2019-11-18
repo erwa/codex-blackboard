@@ -2,7 +2,8 @@
 # compatible with https://www.webpagefx.com/tools/emoji-cheat-sheet/
 # kept server-side so we don't have to send the whole mapping to every
 # client.
-import * as db from './emoji.json'
+db = {}
+db.default = require './emoji.json'
 
 emojiMap = new Map()
 db.default.forEach (entry) ->
